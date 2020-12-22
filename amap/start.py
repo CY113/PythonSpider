@@ -9,4 +9,5 @@
 
 from scrapy.cmdline import execute
 
-execute("scrapy crawl polygon -s JOBDIR=crawls/amap".split())
+# execute("scrapy crawl polygon -s JOBDIR=crawls/amap".split())
+execute("scrapy crawl polygon".split())
