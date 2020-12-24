@@ -27,10 +27,10 @@ def getCeil(lat_min, lat_max, lng_min, lng_max):
     while temp_lng < lng_max:
         temp_lat = lat_min
         while temp_lat < lat_max:
-            ceil_list.append(str(round(temp_lng, 6)) + ',' + str(round(temp_lat + 0.3, 6)) + "|" + str(
-                round(temp_lng + 0.3, 6)) + ',' + str(round(temp_lat, 6)))
-            temp_lat += 0.3
-        temp_lng += 0.3
+            ceil_list.append(str(round(temp_lng, 6)) + ',' + str(round(temp_lat + 0.03, 6)) + "|" + str(
+                round(temp_lng + 0.03, 6)) + ',' + str(round(temp_lat, 6)))
+            temp_lat += 0.03
+        temp_lng += 0.03
     return ceil_list
 
 
@@ -51,6 +51,7 @@ def get_area_list():
 
 if __name__ == '__main__':
     data = get_area_list()[0]
-    name, lat_min, lat_max, lng_min, lng_max = data['city'],data['lat_min'],data['lat_max'],data['lng_min'],data['lng_max']
+    name, lat_min, lat_max, lng_min, lng_max = data['city'], data['lat_min'], data['lat_max'], data['lng_min'], data[
+        'lng_max']
     print(len(getCeil(lat_min, lat_max, lng_min, lng_max)))
     print(getCeil(lat_min, lat_max, lng_min, lng_max))

@@ -15,9 +15,7 @@ class PolygonSpider(scrapy.Spider):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.key = get_project_settings()['KEY']
-        # self.base_url = "https://restapi.amap.com/v3/place/polygon?key={}&polygon={}&keywords=&types=010000|020000|030000|040000|040000|050000|060000|070000|080000|090000|100000|110000|120000|130000|140000|150000|160000|170000|180000|190000|200000|220000|970000|990000&offset=20&page={}&extensions=all".format(
-        #     self.key, {}, {})
-        self.base_url = "https://restapi.amap.com/v3/place/polygon?key={}&polygon={}&keywords=&types=010100&offset=20&page={}&extensions=all".format(
+        self.base_url = "https://restapi.amap.com/v3/place/polygon?key={}&polygon={}&keywords=&types=010000|020000|030000|040000|040000|050000|060000|070000|080000|090000|100000|110000|120000|130000|140000|150000|160000|170000|180000|190000|200000|220000|970000|990000&offset=20&page={}&extensions=all".format(
             self.key, {}, {})
 
     def start_requests(self):
